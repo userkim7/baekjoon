@@ -1,8 +1,15 @@
-m,M=map(int,input().split())
-s1=set(range(m,M+1))
-s2=set()
-num=2
-while num**2<=M:
-    s2.update(range((m//num**2+int(m%num**2!=0))*num**2,M+1,num**2))
+#1016: 제곱 ㄴㄴ수
+#어떤 정수 X가 1보다 큰 제곱수로 나누어 떨어지지 않을 때, 그 수를 제곱ㄴㄴ수라고 한다. 제곱수는 정수의 제곱이다. min과 max가 주어지면, min보다 크거나 같고, max보다 작거나 같은 제곱ㄴㄴ수가 몇 개 있는지 출력한다.
+
+m,M=map(int,input().split()) #최솟값, 최대값 입력 받기
+s1=set(range(m,M+1)) #최솟값~최댓값의 집합 만들기
+s2=set() #제곱수의 배수의 집합
+num=2 
+while num**2<=M: 
+    s2.update(range((m//num**2+int(m%num**2!=0))*num**2,M+1,num**2)) #범위 내의 2의 제곱수의 배수를 s2에 추가
     num+=1
-print(len(s1-s2))
+print(len(s1-s2)) #차집합의 원소 수 출력
+
+#풀이 과정
+#첫 시도
+##
