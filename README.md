@@ -1,5 +1,4 @@
-# baekjoon0
-from 230824
+# baekjoon
 
 ## 2023
 ### 08
