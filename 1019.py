@@ -6,26 +6,26 @@
 ##첫째 줄에 0이 총 몇 번 나오는지, 1이 총 몇 번 나오는지, ..., 9가 총 몇 번 나오는지를 공백으로 구분해 출력한다.
 
 num=input()
-n=len(num)-1 #==math.log(int(num),10),자릿수-1
-count=[0]*10
-for index,i in enumerate(range(n,0,-1)):
-    x=i*(10**(i-1))
-    k=int(num[index])
-    for j in range(1,10):
+n=len(num)-1 #==math.log(int(num),10),자릿수-1 
+count=[0]*10 #0~9의 개수 list
+for index,i in enumerate(range(n,0,-1)): #일의 자리를 제외하고 높은 자리부터,1~9의 갯수 세기
+    x=i*(10**(i-1)) #10**i의 자리 이전에 오는 1~9의 각각의 개수x
+    k=int(num[index]) #10**i의 자릿수k
+    for j in range(1,10): #10**i의 자릿수 밑에는 x*k만큼 1~9가 각각 존재함
         count[j]+=x*k
-    for j in range(1,k):
+    for j in range(1,k): #10**i의 자릿수 미만의 10**i의 자리에 오는 수는 10**i번 추가로 반복됨
         count[j]+=10**i
     if k!=0:
-        count[k]+=int(num[index+1:])+1
-for i in range(1,int(num[-1])+1):
+        count[k]+=int(num[index+1:])+1 #10**i의 자리는 10**i의 자리보다 낮은 자리의 수+1만큼 추가로 반복됨
+for i in range(1,int(num[-1])+1): 일의 자리의 1~9의 갯수 세기
     count[i]+=1
-if len(num)==1:
-    m=int(num[-1])
-else:
-    m=((int(num[0])-1)*10**n+(int(num[1:])+1))*(n+1)
-    for i in range(n):
+if len(num)==1: #전채 갯수 세기
+    m=int(num[-1]) #한자릿수일경우
+else: #두자릿수 이상일경우
+    m=((int(num[0])-1)*10**n+(int(num[1:])+1))*(n+1) #자릿수의 숫자가 될 수 있는 경우의 수*자릿수
+    for i in range(n): #10**n의 자리 밑은 변함 없음
         m+=9*10**i*(i+1)
-count[0]+=m-sum(count[1:])
+count[0]+=m-sum(count[1:]) #전체 갯수에서 1~9의 갯수 빼기->0의 갯수
 print(' '.join(map(str,count)))
 
 ###수열,거듭제곱
