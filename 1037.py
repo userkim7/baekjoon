@@ -6,7 +6,7 @@
 ##첫째 줄에 N을 출력한다. N은 항상 32비트 부호있는 정수로 표현할 수 있다.
 
 input() #쓸모없는 입력 쳐내기
-List=sorted(list(map(int,input().split()))) #진약수 정렬
-print(List[0]*List[-1]) #인수분해된 약수 값 곱하기
+b=[*list(map(int,input().split()))] #진약수 리스트
+print(max(b)*min(b)) #인수분해된 약수 값 곱하기
 
 ###약수,인수분해
