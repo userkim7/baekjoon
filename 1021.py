@@ -12,19 +12,19 @@
 
 from collections import deque
 N,M=map(int,input().split())
-List=list(map(int,input().split()))
-deq=deque(range(1,N+1))
+List=list(map(int,input().split())) #뽑을 원소 순서
+deq=deque(range(1,N+1)) #큐
 result=0
 for index in List:
-    target=deq.index(index)
-    d=len(deq)-target
-    if target<d:
+    target=deq.index(index) #좌표
+    d=len(deq)-target #3번 연산 거리
+    if target<d: #2번 연산이 최단거리
         result+=target
-        deq.rotate(-1*target)
-    else:
+        deq.rotate(-1*target) #2번 연산
+    else: #3번 연산이 최단거리
         result+=d
-        deq.rotate(d)
-    deq.popleft()
+        deq.rotate(d) #3번 연산
+    deq.popleft() #1번 연산
 print(result)
     
 ###데크,최단거리
