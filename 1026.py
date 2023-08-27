@@ -9,11 +9,9 @@
 ##첫째 줄에 N이 주어진다. 둘째 줄에는 A에 있는 N개의 수가 순서대로 주어지고, 셋째 줄에는 B에 있는 수가 순서대로 주어진다. N은 50보다 작거나 같은 자연수이고, A와 B의 각 원소는 100보다 작거나 같은 음이 아닌 정수이다.
 ##첫째 줄에 S의 최솟값을 출력한다.
 
-N=int(input())
-a=list(map(int,input().split()))
-a.sort() 
-b=list(map(int,input().split()))
-b.sort()
-print(sum([a[i-1]*b[-1*i] for i in range(1,N+1)])) #큰수에 작은 수 곱하기
+input() #필요없는 입력 쳐내기
+a=sorted(map(int,input().split())) #a데이터 정렬해서 가져오기
+b=sorted(map(int,input().split())) #b데이터 정렬해서 가져오기
+print(sum(x*y for x,y in zip(a,b[::-1]))) #큰수에 작은수 곱해서 더하기
 
 ###리스트
