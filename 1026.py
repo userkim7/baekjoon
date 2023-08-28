@@ -15,3 +15,6 @@ b=sorted(map(int,input().split())) #b데이터 정렬해서 가져오기
 print(sum(x*y for x,y in zip(a,b[::-1]))) #큰수에 작은수 곱해서 더하기
 
 ###리스트
+
+####숏코딩 8위
+n,a,b=eval("sorted(map(int,input().split())),"*3);print(sum(x*y for x,y in zip(a,b[::-1])))
