@@ -31,3 +31,7 @@ for _ in range(int(sys.stdin.readline())):
     print(['NO','YES'][int(bool(p.fullmatch(sys.stdin.readline().strip())))])
 
 ###정규표현식
+
+####숏코딩 41위
+import re
+for _ in range(int(input())):print(['NO','YES'][int(bool(re.compile('(100+1+|01)+').fullmatch(input())))])
