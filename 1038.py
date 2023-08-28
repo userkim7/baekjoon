@@ -19,5 +19,5 @@ except:
 from itertools import*
 l=[]
 for R in range(1,11):l+=list(combinations('9876543210',R))[::-1]
-try:print(''.join(l[int(input())]))
-except:print(-1)
+l+=['-1']
+print(''.join(l[min(int(input()),1023)]))
