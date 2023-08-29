@@ -10,3 +10,6 @@ b=[*list(map(int,input().split()))] #진약수 리스트
 print(max(b)*min(b)) #인수분해된 약수 값 곱하기
 
 ###약수,인수분해
+
+####숏코딩 14위
+input();*b,=map(int,input().split());print(max(b)*min(b))
