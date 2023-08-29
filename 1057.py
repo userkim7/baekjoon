@@ -9,8 +9,7 @@
 from math import ceil
 N,A,B=map(int,input().split()) #N은 버림
 c=1
-a=min([A,B]) #먼저 경기
-b=max([A,B]) #나중 경기
+a,b=sorted([A,B]) #처음경기,나중경기
 while not (a%2==1 and a+1==b): #토너먼트 만남까지
     a=ceil(a/2) #승리
     b=ceil(b/2) #승리
