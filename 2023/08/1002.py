@@ -17,4 +17,4 @@ for i in range(int(input())): #T번 반복
     else: #만나지 않음
         print(0)
 
-###원리: 원의 방정식
+###원의 방정식
