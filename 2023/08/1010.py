@@ -10,4 +10,4 @@ for i in range(int(input())):
     r,n=map(int,input().split())
     print(fact(n)//(fact(r)*fact(n-r))) #조합 공식 사용하기
 
-###원리:경우의 수
+###경우의 수
