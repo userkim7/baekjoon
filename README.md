@@ -35,7 +35,6 @@
 #### 31
  - 1065 등차수열, 집합
 </details>
-<details>
 <summary>
  
 ### 09
