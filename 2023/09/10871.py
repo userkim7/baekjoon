@@ -12,6 +12,6 @@ for i in list(map(int,input().split())):
 
 ###연산자
 
-####숏코딩 14
+####숏코딩 15
 n,x,*a=map(int,open(0).read().split())
 for i in a:i<x==print(i)
