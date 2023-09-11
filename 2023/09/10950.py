@@ -10,3 +10,6 @@ for i in range(int(input())):
   print(sum(map(int,input()[::2])))
 
 ###사칙연산
+
+####숏코딩 8위
+for a,c,b,c in[*open(0)][1:]:print(int(a)+int(b))
