@@ -6,3 +6,6 @@ for i in range(a**b):
  print()
 
 ###백트래킹
+
+####숏코딩 3위
+from itertools import*;a,_,b=input();*starmap(print,product(*[range(1,int(a)+1)]*int(b))),
